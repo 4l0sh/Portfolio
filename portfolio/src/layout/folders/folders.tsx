@@ -1,11 +1,11 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import trash from '../../images/trash.png';
 import pc from '../../images/pc.png';
 import folder from '../../images/folder.png';
+import Counter from '../../images/CounterStrike.png';
 import './folders.css';
 
 const Folders = () => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <Fragment>
       <div className='folders'>
@@ -32,6 +32,10 @@ const Folders = () => {
         <div className='folderContainer'>
           <img className='icon' src={folder} alt='folder' />
           <p>Skills</p>
+        </div>
+        <div className='folderContainer'>
+          <img className='icon' src={Counter} alt='Counter Strike' />
+          <p>Counter Strike 1.6</p>
         </div>
       </div>
     </Fragment>

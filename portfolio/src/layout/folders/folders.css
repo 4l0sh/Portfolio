@@ -17,6 +17,13 @@
   border: 1px solid transparent;
   box-sizing: border-box;
 }
+.folderHeader {
+  height: 100%;
+}
+.folderTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .folderContainer:hover {
   border: 1px solid gray;
   background-color: rgba(128, 128, 128, 0.308);
@@ -24,7 +31,28 @@
 .folderContainer:active {
   border: 1px solid black;
 }
+.action {
+  width: 30px;
+  height: 30px;
+}
 .icon {
   width: 50px;
   height: 50px;
+  cursor: pointer;
+}
+.folderContent {
+  display: flex;
+  width: 100%;
+  height: 94%;
+  box-sizing: border-box;
+  background-color: beige;
+}
+.sideBar {
+  width: 100%;
+  height: 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
 }
