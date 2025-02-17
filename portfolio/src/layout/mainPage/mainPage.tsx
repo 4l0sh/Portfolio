@@ -9,7 +9,6 @@ const MainPage = () => {
         <div className='Window'>
           <Folders />
         </div>
-
         <div className='taskBar'>
           <div className=' startMenuIcon'>
             <img className='`winIco' src={icon} alt='win' /> start
