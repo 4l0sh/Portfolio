@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import trash from '../../images/trash.png';
 import pc from '../../images/pc.png';
-import folder from '../../images/folder.png';
+import folderIco from '../../images/folder.png';
 import Counter from '../../images/CounterStrike.png';
 import Window from '../components/window';
 import WinError from '../components/winError';
@@ -12,16 +12,15 @@ import './folders.css';
 const Folders = () => {
   const [isFolderOpen, setIsFolderOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
+  const [folder, setFolder] = useState<string | null>(null);
 
   const handleDoubleClick = (folderName: string) => {
-    if (folderName === 'Skills') {
+    if (['Skills', 'Resume', 'Contact'].includes(folderName)) {
+      setFolder(folderName);
       setIsFolderOpen(true);
-      const audio = new Audio(navigationSound);
-      audio.play();
-    }
-    if (folderName === 'Recycle' || folderName === 'Counter') {
-      const audio = new Audio(errorSound);
-      audio.play();
+      new Audio(navigationSound).play();
+    } else if (['Recycle', 'Counter'].includes(folderName)) {
+      new Audio(errorSound).play();
       setIsErrorOpen(true);
     }
   };
@@ -33,41 +32,50 @@ const Folders = () => {
           onDoubleClick={() => handleDoubleClick('Recycle')}
           className='folderContainer'
         >
-          <img className='icon' src={trash} alt='folder' />
+          <img className='icon' src={trash} alt='Recycle Bin' />
           <p>Recycle Bin</p>
         </div>
         <div className='folderContainer'>
-          <img className='icon' src={pc} alt='folder' />
+          <img className='icon' src={pc} alt='My PC' />
           <p>My PC</p>
         </div>
         <div className='folderContainer'>
-          <img className=' icon' src={folder} alt='folder' />
+          <img className='icon' src={folderIco} alt='New Folder' />
           <p>New Folder</p>
         </div>
-        <div className='folderContainer'>
-          <img className='icon' src={folder} alt='folder' />
+        <div
+          onDoubleClick={() => handleDoubleClick('Contact')}
+          className='folderContainer'
+        >
+          <img className='icon' src={folderIco} alt='Contact' />
           <p>Contact</p>
         </div>
-        <div className='folderContainer'>
-          <img className='icon' src={folder} alt='folder' />
+        <div
+          onDoubleClick={() => handleDoubleClick('Resume')}
+          className='folderContainer'
+        >
+          <img className='icon' src={folderIco} alt='Resume' />
           <p>Resume</p>
         </div>
         <div
-          className='folderContainer'
           onDoubleClick={() => handleDoubleClick('Skills')}
+          className='folderContainer'
         >
-          <img className='icon' src={folder} alt='folder' />
+          <img className='icon' src={folderIco} alt='Skills' />
           <p>Skills</p>
         </div>
         <div
           onDoubleClick={() => handleDoubleClick('Counter')}
           className='folderContainer'
         >
-          <img className='icon' src={Counter} alt='Counter Strike' />
+          <img className='icon' src={Counter} alt='Counter Strike 1.6' />
           <p>Counter Strike 1.6</p>
         </div>
       </div>
-      {isFolderOpen && <Window onClose={() => setIsFolderOpen(false)} />}
+
+      {isFolderOpen && folder && (
+        <Window folderName={folder} onClose={() => setIsFolderOpen(false)} />
+      )}
       {isErrorOpen && <WinError onClose={() => setIsErrorOpen(false)} />}
     </Fragment>
   );

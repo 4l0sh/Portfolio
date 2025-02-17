@@ -14,13 +14,36 @@ import customize from '../../images/customize.png';
 import disk from '../../images/disk.png';
 import github from '../../images/githubIcon.png';
 import './window.css';
-import Skills, { path } from '../folders/Skills/skills';
-const Window = ({ onClose }: any) => {
+import Skills from '../folders/Skills/skills';
+import Resume from '../folders/Resume/resume';
+import Contact from '../folders/Contact/contact';
+
+const Window = ({
+  folderName,
+  onClose,
+}: {
+  folderName: string;
+  onClose: () => void;
+}) => {
+  const renderContent = () => {
+    switch (folderName) {
+      case 'Skills':
+        return <Skills />;
+      case 'Resume':
+        return <Resume />;
+      case 'Contact':
+        return <Contact />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Fragment>
       <div className='windowContainer'>
+        {/* Header */}
         <div className='windowHeader'>
-          <h4 className='windowTitle'>Skills</h4>
+          <h4 className='windowTitle'>{folderName}</h4>
           <div className='windowActions'>
             <img className='windowAction' src={minimize} alt='minimize' />
             <img className='windowAction' src={maximize} alt='maximize' />
@@ -32,39 +55,42 @@ const Window = ({ onClose }: any) => {
             />
           </div>
         </div>
+
+        {/* Toolbar */}
         <div className='toolBar'>
-          {' '}
-          <button className='toolBtn'> File</button>
-          <button className='toolBtn'> Edit</button>
-          <button className='toolBtn'> View</button>
+          <button className='toolBtn'>File</button>
+          <button className='toolBtn'>Edit</button>
+          <button className='toolBtn'>View</button>
           <button className='toolBtn'>Tools</button>
-          <button className='toolBtn'> Help</button>
+          <button className='toolBtn'>Help</button>
         </div>
 
+        {/* Actions Bar */}
         <div className='actionsBar'>
           <div className='action'>
             <img className='search' src={left} alt='back' />
             <p className='actionText'>Back</p>
           </div>
           <div className='action'>
-            <img className='search' src={right} alt='back' />
+            <img className='search' src={right} alt='next' />
             <p className='actionText'>Next</p>
           </div>
           <div className='action'>
-            <img className='search' src={search} alt='searc' />
-            <p className='actionText'> Search</p>
+            <img className='search' src={search} alt='search' />
+            <p className='actionText'>Search</p>
           </div>
           <div className='action'>
-            <img className='search' src={files} alt='searc' />
-            <p className='actionText'> Files</p>
+            <img className='search' src={files} alt='files' />
+            <p className='actionText'>Files</p>
           </div>
         </div>
+
         <div className='pathBar'>
           <div className='pathAdress'>
-            <p>Adress</p>
+            <p>Address</p>
           </div>
           <div className='path'>
-            <p className='pathText'>{path}</p>
+            <p className='pathText'>C://{folderName}</p>
           </div>
         </div>
         <div className='folderContent'>
@@ -84,7 +110,7 @@ const Window = ({ onClose }: any) => {
                 </div>
                 <div className='taskWithIcon'>
                   <img className='sIcon' src={controlPanel} alt='' />
-                  <a href='#'>Control Panle</a>
+                  <a href='#'>Control Panel</a>
                 </div>
               </div>
             </div>
@@ -128,7 +154,11 @@ const Window = ({ onClose }: any) => {
             </div>
           </div>
           <div className='filesContainer'>
-            <Skills />
+            {folderName === 'Recycle' || folderName === 'Counter' ? (
+              <p>Folder content for {folderName}</p>
+            ) : (
+              renderContent()
+            )}
           </div>
         </div>
       </div>
