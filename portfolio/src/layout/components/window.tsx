@@ -41,7 +41,6 @@ const Window = ({
   return (
     <Fragment>
       <div className='windowContainer'>
-        {/* Header */}
         <div className='windowHeader'>
           <h4 className='windowTitle'>{folderName}</h4>
           <div className='windowActions'>
@@ -56,7 +55,6 @@ const Window = ({
           </div>
         </div>
 
-        {/* Toolbar */}
         <div className='toolBar'>
           <button className='toolBtn'>File</button>
           <button className='toolBtn'>Edit</button>
@@ -65,7 +63,6 @@ const Window = ({
           <button className='toolBtn'>Help</button>
         </div>
 
-        {/* Actions Bar */}
         <div className='actionsBar'>
           <div className='action'>
             <img className='search' src={left} alt='back' />

@@ -20,6 +20,8 @@
   padding: 0 10px;
   box-sizing: border-box;
   background-color: rgb(24, 3, 211);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .windowAction {
