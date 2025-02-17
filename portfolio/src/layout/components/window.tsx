@@ -56,6 +56,7 @@ const Window = ({ onClose }: any) => {
           </div>
           <div className='action'>
             <img className='search' src={files} alt='searc' />
+            <p className='actionText'> Files</p>
           </div>
         </div>
         <div className='pathBar'>

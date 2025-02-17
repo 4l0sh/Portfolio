@@ -14,10 +14,14 @@ const Folders = () => {
       setIsFolderOpen(true);
     }
   };
+
   return (
     <Fragment>
       <div className='folders'>
-        <div className='folderContainer'>
+        <div
+          onDoubleClick={() => handleDoubleClick('Recycle')}
+          className='folderContainer'
+        >
           <img className='icon' src={trash} alt='folder' />
           <p>Recycle Bin</p>
         </div>
