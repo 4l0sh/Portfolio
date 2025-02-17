@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
-import icon from '../../images/icon.png';
 import Folders from '../folders/folders';
 import sound from '../../images/sound.png';
 import wifi from '../../images/wifi.png';
 import bluetooth from '../../images/bluetooth.png';
+import startMenu from '../../images/startMenu.png';
 import './style.css';
 const MainPage = () => {
   // function startTime() {
@@ -31,7 +31,7 @@ const MainPage = () => {
         </div>
         <div className='taskBar'>
           <div className='startMenuIcon'>
-            <img className='winIco' src={icon} alt='win' /> start
+            <img className='winIco' src={startMenu} alt='win' />
           </div>
           <div className='taskActionsContainer'>
             <div className='taskIcons'>
