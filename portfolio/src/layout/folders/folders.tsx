@@ -4,14 +4,19 @@ import pc from '../../images/pc.png';
 import folder from '../../images/folder.png';
 import Counter from '../../images/CounterStrike.png';
 import Window from '../components/window';
+import WinError from '../components/winError';
 import './folders.css';
 
 const Folders = () => {
   const [isFolderOpen, setIsFolderOpen] = useState(false);
+  const [isErrorOpen, setIsErrorOpen] = useState(false);
 
   const handleDoubleClick = (folderName: string) => {
     if (folderName === 'Skills') {
       setIsFolderOpen(true);
+    }
+    if (folderName === 'Recycle') {
+      setIsErrorOpen(true);
     }
   };
 
@@ -54,6 +59,7 @@ const Folders = () => {
         </div>
       </div>
       {isFolderOpen && <Window onClose={() => setIsFolderOpen(false)} />}
+      {isErrorOpen && <WinError onClose={() => setIsErrorOpen(false)} />}
     </Fragment>
   );
 };

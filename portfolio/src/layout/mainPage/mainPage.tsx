@@ -6,22 +6,22 @@ import wifi from '../../images/wifi.png';
 import bluetooth from '../../images/bluetooth.png';
 import './style.css';
 const MainPage = () => {
-  function startTime() {
-    const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    m = checkTime(m);
-    const clockElement = document.getElementById('clock') as HTMLElement;
-    clockElement.innerHTML = h + ':' + m;
-    const t = setTimeout(startTime, 500);
-  }
-  function checkTime(i: any) {
-    if (i < 10) {
-      i = '0' + i;
-    }
-    return i;
-  }
-  startTime();
+  // function startTime() {
+  //   const today = new Date();
+  //   let h = today.getHours();
+  //   let m = today.getMinutes();
+  //   m = checkTime(m);
+  //   const clockElement = document.getElementById('clock') as HTMLElement;
+  //   clockElement.innerHTML = h + ':' + m;
+  //   const t = setTimeout(startTime, 500);
+  // }
+  // function checkTime(i: any) {
+  //   if (i < 10) {
+  //     i = '0' + i;
+  //   }
+  //   return i;
+  // }
+  // startTime();
 
   return (
     <Fragment>
