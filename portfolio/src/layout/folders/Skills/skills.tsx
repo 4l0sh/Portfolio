@@ -6,6 +6,7 @@ import left from '../../../images/left.png';
 import right from '../../../images/right.png';
 import search from '../../../images/search.png';
 import files from '../../../images/files.png';
+import info from '../../../images/info.png';
 import './skills.css';
 
 const Skills = () => {
@@ -54,9 +55,63 @@ const Skills = () => {
         </div>
         <div className='folderContent'>
           <div className='sideBar'>
-            <div className='systemTasks'></div>
-            <div className='systemTasks'></div>
-            <div className='systemTasks'></div>
+            <div className='systemTasks'>
+              <div className='systemTasksHeader'>
+                <p className='tasksText'>System Tasks</p>
+              </div>
+              <div className='systemTasksContent'>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>View System Information</a>
+                </div>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>Add or Remove Programs</a>
+                </div>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>Change a Setting</a>
+                </div>
+              </div>
+            </div>
+            <div className='systemTasks'>
+              <div className='systemTasksHeader'>
+                <p className='tasksText'>Other Places</p>
+              </div>
+              <div className='systemTasksContent'>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>My Network Places</a>
+                </div>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>My Documents</a>
+                </div>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>Control Panel</a>
+                </div>
+              </div>
+            </div>
+            <div className='systemTasks'>
+              <div className='systemTasksHeader'>
+                <p className='tasksText'>Details</p>
+              </div>
+              <div className='systemTasksContent'>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>View System Information</a>
+                </div>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>Add or Remove Programs</a>
+                </div>
+                <div className='taskWithIcon'>
+                  <img src={info} alt='' />
+                  <a href='#'>Change a Setting</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -28,10 +28,7 @@ body {
 .test {
   padding: 10px;
 }
-p {
-  width: 140%;
-  text-align: center;
-}
+
 .taskBar {
   display: flex;
   position: absolute;
