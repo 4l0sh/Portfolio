@@ -5,6 +5,8 @@ import folder from '../../images/folder.png';
 import Counter from '../../images/CounterStrike.png';
 import Window from '../components/window';
 import WinError from '../components/winError';
+import errorSound from '../../sfx/WindowsXPErrorSound.mp3';
+import navigationSound from '../../sfx/navigation.mp3';
 import './folders.css';
 
 const Folders = () => {
@@ -14,8 +16,12 @@ const Folders = () => {
   const handleDoubleClick = (folderName: string) => {
     if (folderName === 'Skills') {
       setIsFolderOpen(true);
+      const audio = new Audio(navigationSound);
+      audio.play();
     }
-    if (folderName === 'Recycle') {
+    if (folderName === 'Recycle' || folderName === 'Counter') {
+      const audio = new Audio(errorSound);
+      audio.play();
       setIsErrorOpen(true);
     }
   };
@@ -53,7 +59,10 @@ const Folders = () => {
           <img className='icon' src={folder} alt='folder' />
           <p>Skills</p>
         </div>
-        <div className='folderContainer'>
+        <div
+          onDoubleClick={() => handleDoubleClick('Counter')}
+          className='folderContainer'
+        >
           <img className='icon' src={Counter} alt='Counter Strike' />
           <p>Counter Strike 1.6</p>
         </div>
