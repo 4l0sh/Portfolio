@@ -13,12 +13,12 @@ import sharedDocuments from '../../images/sharedDocuments.png';
 import customize from '../../images/customize.png';
 import disk from '../../images/disk.png';
 import github from '../../images/githubIcon.png';
-import './window.css';
 import Skills from '../folders/Skills/skills';
 import Resume from '../folders/Resume/resume';
 import Contact from '../folders/Contact/contact';
 import Mypc from '../folders/Mypc/mypc';
 import Hobbies from '../folders/Hobbies/hobbies';
+import './window.css';
 
 const Window = ({
   folderName,

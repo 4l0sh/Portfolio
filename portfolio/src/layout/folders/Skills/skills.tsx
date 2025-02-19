@@ -8,8 +8,6 @@ import ts from '../../../images/typescript.png';
 import react from '../../../images/react.png';
 import './skills.css';
 
-export const path: string = 'C://What I have worked with so far';
-
 const Skills = () => {
   const htmlFolder = {
     fileName: 'HTML',

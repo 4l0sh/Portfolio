@@ -9,6 +9,7 @@ body {
   width: 100%;
   color: white;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -33,21 +34,19 @@ body {
   align-items: center;
   box-sizing: border-box;
   height: 100%;
-  width: 13%;
-
+  width: 10%;
   background: linear-gradient(to right, #4c8ccf, #1d77e6);
-
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 5px;
 }
 .taskIcons {
   display: flex;
-  gap: 10px;
+  gap: 3px;
 }
 .clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -70,6 +69,7 @@ body {
 }
 
 .winIco {
+  margin-top: 7px;
   width: 60%;
   margin-left: 0px;
   transform: translateX(-6px);

@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import Folders from '../folders/folders';
 import sound from '../../images/sound.png';
 import wifi from '../../images/wifi.png';
@@ -6,22 +6,24 @@ import bluetooth from '../../images/bluetooth.png';
 import startMenu from '../../images/startMenu.png';
 import './style.css';
 const MainPage = () => {
-  // function startTime() {
-  //   const today = new Date();
-  //   let h = today.getHours();
-  //   let m = today.getMinutes();
-  //   m = checkTime(m);
-  //   const clockElement = document.getElementById('clock') as HTMLElement;
-  //   clockElement.innerHTML = h + ':' + m;
-  //   const t = setTimeout(startTime, 500);
-  // }
-  // function checkTime(i: any) {
-  //   if (i < 10) {
-  //     i = '0' + i;
-  //   }
-  //   return i;
-  // }
-  // startTime();
+  useEffect(() => {
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      m = checkTime(m);
+      const clockElement = document.getElementById('clock') as HTMLElement;
+      clockElement.innerHTML = h + ':' + m;
+      const t = setTimeout(startTime, 500);
+    }
+    function checkTime(i: any) {
+      if (i < 10) {
+        i = '0' + i;
+      }
+      return i;
+    }
+    startTime();
+  }, []);
 
   return (
     <Fragment>
@@ -40,7 +42,7 @@ const MainPage = () => {
               <img className='sIcon' src={bluetooth} alt='' />
             </div>
             <div className='clock'>
-              <h2 id='clock'></h2>
+              <h3 id='clock'></h3>
             </div>
           </div>
         </div>
