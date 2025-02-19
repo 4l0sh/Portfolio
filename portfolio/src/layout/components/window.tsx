@@ -20,6 +20,14 @@ import Mypc from '../folders/Mypc/mypc';
 import Hobbies from '../folders/Hobbies/hobbies';
 import './window.css';
 
+const folderPaths: Record<string, string> = {
+  Skills: 'C://PersonalSkills/What I Do Good ',
+  Resume: 'C://Double Click To Download Resume',
+  Contact: 'C://Contact/Send Me A Message',
+  MyPc: 'C://MyPc',
+  Hobbies: 'C://Hobbies/What I Like To Do',
+};
+
 const Window = ({
   folderName,
   onClose,
@@ -93,7 +101,7 @@ const Window = ({
             <p>Address</p>
           </div>
           <div className='path'>
-            <p className='pathText'>C://{folderName}</p>
+            <p className='pathText'>{folderPaths[folderName]}</p>
           </div>
         </div>
         <div className='folderContent'>
