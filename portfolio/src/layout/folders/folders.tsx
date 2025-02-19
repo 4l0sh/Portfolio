@@ -15,7 +15,7 @@ const Folders = () => {
   const [folder, setFolder] = useState<string | null>(null);
 
   const handleDoubleClick = (folderName: string) => {
-    if (['Skills', 'Resume', 'Contact'].includes(folderName)) {
+    if (['Skills', 'Resume', 'Contact', 'MyPc'].includes(folderName)) {
       setFolder(folderName);
       setIsFolderOpen(true);
       new Audio(navigationSound).play();
@@ -35,7 +35,10 @@ const Folders = () => {
           <img className='icon' src={trash} alt='Recycle Bin' />
           <p>Recycle Bin</p>
         </div>
-        <div className='folderContainer'>
+        <div
+          onDoubleClick={() => handleDoubleClick('MyPc')}
+          className='folderContainer'
+        >
           <img className='icon' src={pc} alt='My PC' />
           <p>My PC</p>
         </div>

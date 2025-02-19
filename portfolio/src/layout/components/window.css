@@ -27,7 +27,8 @@
 .windowAction {
   width: 30px;
   height: 30px;
-  margin: 2px;
+  margin: 0;
+  padding: 0;
   cursor: pointer;
 }
 .windowAction:hover {
@@ -211,7 +212,6 @@
   flex-direction: row;
   align-items: center;
 }
-
 .filesContainer {
   width: 75%;
   height: 100%;

@@ -17,6 +17,7 @@ import './window.css';
 import Skills from '../folders/Skills/skills';
 import Resume from '../folders/Resume/resume';
 import Contact from '../folders/Contact/contact';
+import Mypc from '../folders/Mypc/mypc';
 
 const Window = ({
   folderName,
@@ -33,6 +34,8 @@ const Window = ({
         return <Resume />;
       case 'Contact':
         return <Contact />;
+      case 'MyPc':
+        return <Mypc />;
       default:
         return null;
     }
