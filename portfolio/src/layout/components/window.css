@@ -34,6 +34,9 @@
 .windowAction:hover {
   filter: brightness(1.2);
 }
+.actionText {
+  margin-left: 2px;
+}
 .toolBar {
   width: 100%;
   background-color: rgb(189, 187, 184);
@@ -73,7 +76,7 @@
   padding: 0 10px;
 }
 .action {
-  flex: 0 0 10%;
+  flex: 0 0 11%;
   width: auto;
   display: flex;
   padding: 0 5px;

@@ -7,9 +7,9 @@ import WinError from '../../components/winError';
 import './mypc.css';
 
 const Mypc = () => {
-  const [isFolderOpen, setIsFolderOpen] = useState(false);
+  const [_, setIsFolderOpen] = useState(false); // Dummy state variable
   const [isErrorOpen, setIsErrorOpen] = useState(false);
-  const [folder, setFolder] = useState<string | null>(null);
+  const [__, setFolder] = useState<string | null>(null);
   return (
     <Fragment>
       <div className='pcContainer'>

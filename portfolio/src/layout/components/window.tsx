@@ -23,7 +23,7 @@ import './window.css';
 const folderPaths: Record<string, string> = {
   Skills: 'C://PersonalSkills/What I Do Good ',
   Resume: 'C://Double Click To Download Resume',
-  Contact: 'C://Contact/Send Me A Message',
+  Contact: 'C://Open Note Pad To Send Me A Message',
   MyPc: 'C://MyPc',
   Hobbies: 'C://Hobbies/What I Like To Do',
 };

@@ -31,6 +31,7 @@ hr {
 }
 .filesBox {
   margin-bottom: 20px;
+  margin-left: 3px;
   height: 60px;
   width: auto;
   display: flex;

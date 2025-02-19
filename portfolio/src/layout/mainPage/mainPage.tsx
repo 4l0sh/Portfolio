@@ -14,7 +14,7 @@ const MainPage = () => {
       m = checkTime(m);
       const clockElement = document.getElementById('clock') as HTMLElement;
       clockElement.innerHTML = h + ':' + m;
-      const t = setTimeout(startTime, 500);
+      setTimeout(startTime, 500);
     }
     function checkTime(i: any) {
       if (i < 10) {
