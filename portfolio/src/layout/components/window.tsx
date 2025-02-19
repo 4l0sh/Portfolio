@@ -18,6 +18,7 @@ import Skills from '../folders/Skills/skills';
 import Resume from '../folders/Resume/resume';
 import Contact from '../folders/Contact/contact';
 import Mypc from '../folders/Mypc/mypc';
+import Hobbies from '../folders/Hobbies/hobbies';
 
 const Window = ({
   folderName,
@@ -36,6 +37,8 @@ const Window = ({
         return <Contact />;
       case 'MyPc':
         return <Mypc />;
+      case 'Hobbies':
+        return <Hobbies />;
       default:
         return null;
     }

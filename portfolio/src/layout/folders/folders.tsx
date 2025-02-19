@@ -3,6 +3,7 @@ import trash from '../../images/trash.png';
 import pc from '../../images/pc.png';
 import folderIco from '../../images/folder.png';
 import Counter from '../../images/CounterStrike.png';
+import hobbiesFolder from '../../images/hobbiesFolder.png';
 import Window from '../components/window';
 import WinError from '../components/winError';
 import errorSound from '../../sfx/WindowsXPErrorSound.mp3';
@@ -15,7 +16,7 @@ export const handleDoubleClick = (
   setIsFolderOpen: (isOpen: boolean) => void,
   setIsErrorOpen: (isOpen: boolean) => void
 ) => {
-  if (['Skills', 'Resume', 'Contact', 'MyPc'].includes(folderName)) {
+  if (['Skills', 'Resume', 'Contact', 'MyPc', 'Hobbies'].includes(folderName)) {
     setFolder(folderName);
     setIsFolderOpen(true);
     new Audio(navigationSound).play();
@@ -24,7 +25,6 @@ export const handleDoubleClick = (
     setIsErrorOpen(true);
   }
 };
-
 const Folders = () => {
   const [isFolderOpen, setIsFolderOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
@@ -61,9 +61,19 @@ const Folders = () => {
           <img className='icon' src={pc} alt='My PC' />
           <p>My PC</p>
         </div>
-        <div className='folderContainer'>
-          <img className='icon' src={folderIco} alt='New Folder' />
-          <p>New Folder</p>
+        <div
+          onDoubleClick={() =>
+            handleDoubleClick(
+              'Hobbies',
+              setFolder,
+              setIsFolderOpen,
+              setIsErrorOpen
+            )
+          }
+          className='folderContainer'
+        >
+          <img className='icon' src={hobbiesFolder} alt='New Folder' />
+          <p>Hobbies</p>
         </div>
         <div
           onDoubleClick={() =>
