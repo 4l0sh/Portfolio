@@ -38,6 +38,11 @@ hr {
   color: black;
   align-items: center;
   justify-content: flex-start;
+  padding: 5px;
+  cursor: pointer;
+}
+.filesBox:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .filesBox p {
   font-size: 14px;
