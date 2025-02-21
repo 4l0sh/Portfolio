@@ -141,18 +141,22 @@
   justify-content: flex-end;
   gap: 0px;
 }
-.windowAction img {
+.windowsAction img {
   width: 30px;
   margin: 5px;
 }
-.windowAction {
+.windowsAction {
   display: flex;
   width: 30%;
-  height: 8%;
+  height: 90%;
   justify-content: flex-start;
   align-items: center;
 }
-.windowAction p {
+.windowsAction p {
   font-size: 12px;
   cursor: default;
+}
+
+.windowsAction:hover {
+  background-color: rgba(8, 52, 109, 0.192);
 }

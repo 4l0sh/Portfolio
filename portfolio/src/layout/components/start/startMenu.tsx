@@ -116,11 +116,11 @@ const StartMenu = () => {
           </div>
         </div>
         <div className='windowsActions'>
-          <div className='windowAction'>
+          <div className='windowsAction'>
             <img src={logoff} alt='' />
             <p>Log Off </p>
           </div>
-          <div className='windowAction'>
+          <div className='windowsAction'>
             <img src={shuttown} alt='' />
             <p>Shut Down </p>
           </div>
