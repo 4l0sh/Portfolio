@@ -4,6 +4,7 @@ import notePad from '../../../images/notePad.png';
 import close from '../../../images/close.png';
 import send from '../../../images/send.png';
 import navigationSound from '../../../sfx/navigation.mp3';
+import github from '../../../images/github.png';
 import './contact.css';
 
 const Contact = () => {
@@ -33,6 +34,9 @@ const Contact = () => {
   };
 
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const redirect = () => {
+    location.href = 'https://www.github.com/4l0sh';
+  };
 
   return (
     <Fragment>
@@ -47,6 +51,10 @@ const Contact = () => {
           alt='Note pad'
         />
         <p className='fileName'>Contact Me </p>
+      </div>
+      <div onDoubleClick={redirect} className='fileBox'>
+        <img className='file' src={github} alt='github' />
+        <p className='fileName'>View My Github</p>
       </div>
 
       {isFormOpen && (

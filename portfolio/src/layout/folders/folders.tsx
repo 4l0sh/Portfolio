@@ -4,6 +4,7 @@ import pc from '../../images/pc.png';
 import folderIco from '../../images/folder.png';
 import Counter from '../../images/CounterStrike.png';
 import hobbiesFolder from '../../images/hobbiesFolder.png';
+import tree from '../../images/tree.png';
 import Window from '../components/window';
 import WinError from '../components/winError';
 import errorSound from '../../sfx/WindowsXPErrorSound.mp3';
@@ -114,7 +115,7 @@ const Folders = () => {
           }
           className='folderContainer'
         >
-          <img className='icon' src={folderIco} alt='Skills' />
+          <img className='icon' src={tree} alt='Skills' />
           <p>Skills</p>
         </div>
         <div
