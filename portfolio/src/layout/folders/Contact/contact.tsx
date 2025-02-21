@@ -12,10 +12,9 @@ const Contact = () => {
   const [message, setMessage] = useState<String>('');
   const submitHandler = (e: any) => {
     e.preventDefault();
-    const serviceId = 'service_q1kpjaa';
-    const templateId = 'template_3iirzvy';
-    const publicKey = 'bx1wylxgJ4JFJG2Ys';
-
+    const SERVICE_ID = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -23,7 +22,7 @@ const Contact = () => {
       message: message,
     };
 
-    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
       (response) => {
         console.log('SUCCESS!', response.status, response.text);
       },
@@ -34,6 +33,7 @@ const Contact = () => {
   };
 
   const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <Fragment>
       <div className='fileBox'>
