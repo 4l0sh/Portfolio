@@ -153,14 +153,6 @@ const Window = ({
                   <img className='sIcon' src={github} alt='' />
                   <a href='https://www.github.com/4l0sh'>View My Github</a>
                 </div>
-                <div className='taskWithIcon'>
-                  <img src={info} alt='' />
-                  <a href='#'>Add or Remove Programs</a>
-                </div>
-                <div className='taskWithIcon'>
-                  <img src={info} alt='' />
-                  <a href='#'>Change a Setting</a>
-                </div>
               </div>
             </div>
           </div>

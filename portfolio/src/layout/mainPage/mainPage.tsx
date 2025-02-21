@@ -6,7 +6,6 @@ import bluetooth from '../../images/bluetooth.png';
 import startMenu from '../../images/startMenu.png';
 import MenuComponent from '../components/start/startMenu';
 import './style.css';
-import { set } from 'mongoose';
 const MainPage = () => {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
   useEffect(() => {
@@ -55,7 +54,7 @@ const MainPage = () => {
               <img className='sIcon' src={bluetooth} alt='' />
             </div>
             <div className='clock'>
-              <h3 id='clock'></h3>
+              <h4 id='clock'></h4>
             </div>
           </div>
         </div>

@@ -215,6 +215,9 @@
 .shutDownAction img {
   width: 40px;
 }
+.shutDownAction img:hover {
+  opacity: 0.8;
+}
 .shutDownFooter {
   display: flex;
   width: 100%;
@@ -229,6 +232,12 @@
 #restartIcon {
   width: 50px;
 }
+#restartIcon:hover {
+  opacity: 0.8;
+}
 #standbyIcon {
   width: 50px;
+}
+#standbyIcon:hover {
+  opacity: 0.8;
 }

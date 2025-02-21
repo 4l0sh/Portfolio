@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react';
-import disk from '../../../images/disk.png';
+import disk from '../../../images/localDisk.png';
 import rmdisk from '../../../images/rmdisk.png';
 import gta from '../../../images/gta.png';
 import { handleDoubleClick } from '../folders';
@@ -7,7 +7,7 @@ import WinError from '../../components/winError';
 import './mypc.css';
 
 const Mypc = () => {
-  const [_, setIsFolderOpen] = useState(false); // Dummy state variable
+  const [_, setIsFolderOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
   const [__, setFolder] = useState<string | null>(null);
   return (
