@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import guitarIcon from '../../../images/guitarIcon.png';
 import explorer from '../../../images/explorer.png';
 import minesweeper from '../../../images/minesweeper.png';
@@ -21,8 +21,12 @@ import help from '../../../images/helpIco.png';
 import search from '../../../images/search.png';
 import logoff from '../../../images/logoff.png';
 import shuttown from '../../../images/shutdown.png';
+import windowsIcon from '../../../images/windowsIcon.png';
+import restart from '../../../images/restart.png';
+import standby from '../../../images/standby.png';
 import './startMenu.css';
 const StartMenu = () => {
+  const [isShutDownOpen, setIsShutDownOpen] = useState(false);
   return (
     <Fragment>
       <div className='startMenu'>
@@ -120,10 +124,45 @@ const StartMenu = () => {
             <img src={logoff} alt='' />
             <p>Log Off </p>
           </div>
-          <div className='windowsAction'>
+          <div
+            onClick={() => setIsShutDownOpen(!isShutDownOpen)}
+            className='windowsAction'
+          >
             <img src={shuttown} alt='' />
             <p>Shut Down </p>
           </div>
+          {isShutDownOpen && (
+            <div className='shutDownMenu'>
+              <div className='shutDownHeader'>
+                <p>Shut Down Windows</p>
+                <img src={windowsIcon} alt='' />
+              </div>
+              <div className='shutDownContent'>
+                <div className='shutDownAction'>
+                  <img id='standbyIcon' src={standby} alt='' />
+                  <p>Stand By</p>
+                </div>
+                <div className='shutDownAction'>
+                  <img src={shuttown} alt='' />
+                  <p>Shut Down </p>
+                </div>
+                <div className='shutDownAction'>
+                  <img id='restartIcon' src={restart} alt='' />
+                  <p>Restart </p>
+                </div>
+              </div>
+              <div className='shutDownFooter'>
+                {' '}
+                <button
+                  onClick={() => setIsShutDownOpen(!isShutDownOpen)}
+                  className='cancelBtn'
+                >
+                  {' '}
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </Fragment>
