@@ -1,0 +1,30 @@
+.startupContainer {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background-image: url('../../gifs/winxscreen.gif');
+  background-size: cover;
+  background-position: center;
+}
+.messages {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  top: 60%;
+}
+.message {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}

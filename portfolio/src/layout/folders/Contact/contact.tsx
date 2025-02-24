@@ -5,6 +5,7 @@ import close from '../../../images/close.png';
 import send from '../../../images/send.png';
 import navigationSound from '../../../sfx/navigation.mp3';
 import github from '../../../images/github.png';
+import instagram from '../../../images/instagram.png';
 import './contact.css';
 
 const Contact = () => {
@@ -37,6 +38,9 @@ const Contact = () => {
   const redirect = () => {
     location.href = 'https://www.github.com/4l0sh';
   };
+  const toInstagram = () => {
+    location.href = 'https://www.instagram.com/3li.tahir';
+  };
 
   return (
     <Fragment>
@@ -55,6 +59,10 @@ const Contact = () => {
       <div onDoubleClick={redirect} className='fileBox'>
         <img className='file' src={github} alt='github' />
         <p className='fileName'>View My Github</p>
+      </div>
+      <div onDoubleClick={toInstagram} className='fileBox'>
+        <img className='file' src={instagram} alt='github' />
+        <p className='fileName'>Visit my Instagram</p>
       </div>
 
       {isFormOpen && (
