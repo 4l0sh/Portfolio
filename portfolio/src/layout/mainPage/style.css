@@ -94,3 +94,17 @@ body {
   border-top-left-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 600px) {
+  .container {
+    height: 700px;
+
+    overflow: hidden;
+  }
+  .Window {
+    height: 100%;
+    width: 900px;
+  }
+  .taskActionsContainer {
+    width: 27%;
+  }
+}

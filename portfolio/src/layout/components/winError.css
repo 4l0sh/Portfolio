@@ -63,3 +63,16 @@
   background-color: rgb(221, 221, 221);
   transform: translateY(2px);
 }
+@media (max-width: 600px) {
+  .errorContainer {
+    width: 80%;
+    height: 50vh;
+  }
+  .errorContent {
+    gap: 10px;
+  }
+  .taskIcons {
+    gap: 1px;
+    width: 100%;
+  }
+}

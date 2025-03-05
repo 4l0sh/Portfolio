@@ -7,7 +7,7 @@ import hobbiesFolder from '../../images/hobbiesFolder.png';
 import tree from '../../images/tree.png';
 import Window from '../components/window';
 import WinError from '../components/winError';
-import errorSound from '../../sfx/WindowsXPErrorSound.mp3';
+import errorSound from '../../sfx/windows-xp-error.mp3';
 import navigationSound from '../../sfx/navigation.mp3';
 import './folders.css';
 

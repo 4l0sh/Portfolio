@@ -25,7 +25,7 @@ const Startup = () => {
       setTimeout(() => {
         const audio = new Audio(startupSound);
         audio.play();
-        audio.volume = 0.5;
+        audio.volume = 0.7;
         audio.loop = false;
         navigate('/mainPage');
       }, 2000);

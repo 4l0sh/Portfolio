@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import guitarIcon from '../../../images/guitarIcon.png';
 import explorer from '../../../images/explorer.png';
 import minesweeper from '../../../images/minesweeper.png';
@@ -27,6 +28,7 @@ import standby from '../../../images/standby.png';
 import './startMenu.css';
 const StartMenu = () => {
   const [isShutDownOpen, setIsShutDownOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <Fragment>
       <div className='startMenu'>
@@ -138,15 +140,30 @@ const StartMenu = () => {
                 <img src={windowsIcon} alt='' />
               </div>
               <div className='shutDownContent'>
-                <div className='shutDownAction'>
+                <div
+                  onClick={() => {
+                    navigate('/shutdown');
+                  }}
+                  className='shutDownAction'
+                >
                   <img id='standbyIcon' src={standby} alt='' />
                   <p>Stand By</p>
                 </div>
-                <div className='shutDownAction'>
+                <div
+                  onClick={() => {
+                    navigate('/shutdown');
+                  }}
+                  className='shutDownAction'
+                >
                   <img src={shuttown} alt='' />
                   <p>Shut Down </p>
                 </div>
-                <div className='shutDownAction'>
+                <div
+                  onClick={() => {
+                    navigate('/shutdown');
+                  }}
+                  className='shutDownAction'
+                >
                   <img id='restartIcon' src={restart} alt='' />
                   <p>Restart </p>
                 </div>

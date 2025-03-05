@@ -92,10 +92,11 @@ const Contact = () => {
             <label htmlFor='email'>Email:</label>
             <input
               onChange={(e) => setEmail(e.target.value)}
-              className='formInput'
+              className='formInput '
               type='email'
               id='email'
               name='email'
+              style={{ width: '80%' }}
             />
 
             <label htmlFor='message'>Message:</label>

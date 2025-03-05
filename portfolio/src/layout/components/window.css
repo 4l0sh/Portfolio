@@ -249,3 +249,18 @@
   width: 15px;
   height: 15px;
 }
+@media (max-width: 600px) {
+  .windowContainer {
+    width: 90%;
+    height: 80vh;
+  }
+  .filesContainer {
+    overflow: auto;
+    flex-wrap: wrap;
+  }
+  .fileBox {
+    margin: 5px;
+    height: 80px;
+    width: 90px;
+  }
+}
