@@ -18,6 +18,7 @@ import Resume from '../folders/Resume/resume';
 import Contact from '../folders/Contact/contact';
 import Mypc from '../folders/Mypc/mypc';
 import Hobbies from '../folders/Hobbies/hobbies';
+import Porjects from '../folders/Projects/projects';
 import './window.css';
 
 const folderPaths: Record<string, string> = {
@@ -26,6 +27,7 @@ const folderPaths: Record<string, string> = {
   Contact: 'C://Open Note Pad To Send Me A Message',
   MyPc: 'C://MyPc',
   Hobbies: 'C://Hobbies/What I Like To Do',
+  Projects: 'C://Projects/Double Click To Open Project',
 };
 
 const Window = ({
@@ -47,6 +49,8 @@ const Window = ({
         return <Mypc />;
       case 'Hobbies':
         return <Hobbies />;
+      case 'Projects':
+        return <Porjects />;
       default:
         return null;
     }

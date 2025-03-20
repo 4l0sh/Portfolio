@@ -9,6 +9,8 @@ import Window from '../components/window';
 import WinError from '../components/winError';
 import errorSound from '../../sfx/windows-xp-error.mp3';
 import navigationSound from '../../sfx/navigation.mp3';
+import briefcase from '../../images/briefcase.png';
+import MSN from '../../images/MSN.png';
 import './folders.css';
 
 export const handleDoubleClick = (
@@ -17,7 +19,11 @@ export const handleDoubleClick = (
   setIsFolderOpen: (isOpen: boolean) => void,
   setIsErrorOpen: (isOpen: boolean) => void
 ) => {
-  if (['Skills', 'Resume', 'Contact', 'MyPc', 'Hobbies'].includes(folderName)) {
+  if (
+    ['Skills', 'Resume', 'Contact', 'MyPc', 'Hobbies', 'Projects'].includes(
+      folderName
+    )
+  ) {
     setFolder(folderName);
     setIsFolderOpen(true);
     new Audio(navigationSound).play();
@@ -101,7 +107,7 @@ const Folders = () => {
           }
           className='folderContainer'
         >
-          <img className='icon' src={folderIco} alt='Resume' />
+          <img className='icon' src={briefcase} alt='Resume' />
           <p>Resume</p>
         </div>
         <div
@@ -117,6 +123,20 @@ const Folders = () => {
         >
           <img className='icon' src={tree} alt='Skills' />
           <p>Skills</p>
+        </div>
+        <div
+          onDoubleClick={() =>
+            handleDoubleClick(
+              'Projects',
+              setFolder,
+              setIsFolderOpen,
+              setIsErrorOpen
+            )
+          }
+          className='folderContainer'
+        >
+          <img className='icon' src={MSN} alt='Projects' />
+          <p>Projects</p>
         </div>
         <div
           onDoubleClick={() =>
