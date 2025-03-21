@@ -10,6 +10,10 @@ const Mypc = () => {
   const [_, setIsFolderOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
   const [__, setFolder] = useState<string | null>(null);
+
+  const rickroll = () => {
+    window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
+  };
   return (
     <Fragment>
       <div className='pcContainer'>
@@ -18,7 +22,7 @@ const Mypc = () => {
             <p className='sectionText'> Hard Disk Drives</p>
             <hr />
             <div className='filesContainer'>
-              <div className='filesBox'>
+              <div onDoubleClick={rickroll} className='filesBox'>
                 <img className='pcIcon' src={disk} alt='' />
                 <p>Local Disk (C:)</p>
               </div>
@@ -30,7 +34,7 @@ const Mypc = () => {
             <p className='sectionText'> Removable Disks </p>
             <hr />
             <div className='filesContainer'>
-              <div className='filesBox'>
+              <div onDoubleClick={rickroll} className='filesBox'>
                 <img className='pcIcon' src={rmdisk} alt='' />
                 <p>CD Drive</p>
               </div>
